@@ -1,4 +1,4 @@
-package com.algorithmic.examples;
+package codility.algorithm.examples;
 
 public class TwoDigitsSumValue {
     static Integer[] intArray = {1, 1000, 80, -91};

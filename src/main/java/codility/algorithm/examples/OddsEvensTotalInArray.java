@@ -1,4 +1,4 @@
-package com.algorithmic.examples;
+package codility.algorithm.examples;
 
 import java.util.ArrayList;
 import java.util.Arrays;

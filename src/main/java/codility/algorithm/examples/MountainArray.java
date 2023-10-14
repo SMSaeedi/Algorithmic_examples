@@ -1,11 +1,11 @@
-package com.algorithmic.examples;
+package codility.algorithm.examples;
 
 public class MountainArray {
     static Boolean isMountainArray(int[] arr) {
         if (arr.length == 0)
             throw new RuntimeException("array is empty");
 
-        int i = 0;
+        int i;
         for (i = 1; i < arr.length; i++)
             if (arr[i] < arr[i - 1])
                 break;

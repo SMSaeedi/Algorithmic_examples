@@ -1,4 +1,4 @@
-package com.algorithmic.examples;
+package codility.algorithm.examples;
 
 public class LetterContiguous {
 

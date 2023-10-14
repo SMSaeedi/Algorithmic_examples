@@ -1,4 +1,4 @@
-package com.algorithmic.examples;
+package codility.algorithm.examples;
 import java.util.List;
 
 public class NumberContiguous {

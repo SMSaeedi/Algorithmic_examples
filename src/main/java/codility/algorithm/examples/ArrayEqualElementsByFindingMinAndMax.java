@@ -1,4 +1,4 @@
-package com.algorithmic.examples;
+package codility.algorithm.examples;
 
 import java.util.Arrays;
 
@@ -13,23 +13,21 @@ public class ArrayEqualElementsByFindingMinAndMax {
         System.out.println(minCost(intArray2));
     }
 
-    static int minCost(int arr[]) {
+    static int minCost(int[] arr) {
         int cost = 0;
         Arrays.sort(arr);
         int length = arr.length;
 
         int halfOfLength = arr[length / 2];
 
-        for (int i = 0; i < length; ++i)
-            cost += Math.abs(arr[i] - halfOfLength);
+        for (int j : arr) cost += Math.abs(j - halfOfLength);
 
         if (length % 2 == 0) {
             int tempCost = 0;
 
             halfOfLength = arr[(length / 2) - 1];
 
-            for (int i = 0; i < length; ++i)
-                tempCost += Math.abs(arr[i] - halfOfLength);
+            for (int j : arr) tempCost += Math.abs(j - halfOfLength);
 
             cost = Math.min(cost, tempCost);
         }

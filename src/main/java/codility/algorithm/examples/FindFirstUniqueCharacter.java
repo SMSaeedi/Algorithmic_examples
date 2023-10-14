@@ -1,4 +1,4 @@
-package com.algorithmic.examples;
+package codility.algorithm.examples;
 
 public class FindFirstUniqueCharacter {
     static String str = "efficient";
@@ -14,7 +14,7 @@ public class FindFirstUniqueCharacter {
     }
 
     private static Character findFirstUniqueCharacter(String input) {
-        Character outPut = null;
+        Character outPut;
 
         if (input.length() == 0)
             throw new RuntimeException("empty input!");
