@@ -1,6 +1,7 @@
 # Algorithm examples
-
-This is the README file for the Algorithm examples, including algorithms:
+---------------------------------------
+This is the README file for the Algorithm examples, including :
+<br>
     - **Finding min and max elements in Array**
     - **Finding the first unique character**
     - **Finding hills and vally (Mountain Array)**
