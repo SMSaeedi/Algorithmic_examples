@@ -1,4 +1,4 @@
-package codility.algorithm.examples;
+package algorithm.examples;
 
 public class MountainArray {
     static Boolean isMountainArray(int[] arr) {

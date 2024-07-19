@@ -1,4 +1,5 @@
-package codility.algorithm.examples;
+package algorithm.examples;
+
 
 import org.apache.commons.lang3.ArrayUtils;
 

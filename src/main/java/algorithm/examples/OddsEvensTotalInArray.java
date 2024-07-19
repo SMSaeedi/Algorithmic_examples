@@ -1,4 +1,4 @@
-package codility.algorithm.examples;
+package algorithm.examples;
 
 import java.util.ArrayList;
 import java.util.Arrays;
