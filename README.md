@@ -2,7 +2,6 @@
 ---------------------------------------
 This is the README file for the Algorithm examples, including :<br>
 
-- **Finding min and max elements in Array**  <br>
 - **Finding the first unique character**  <br>
 - **Finding hills and vally (Mountain Aray)**  <br>
 - **Finding max and second max element of an Array**  <br>

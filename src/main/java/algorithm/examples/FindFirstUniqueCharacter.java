@@ -16,7 +16,7 @@ public class FindFirstUniqueCharacter {
     private static Character findFirstUniqueCharacter(String input) {
         Character outPut;
 
-        if (input.length() == 0)
+        if (input.isEmpty())
             throw new RuntimeException("empty input!");
 
         for (Character ch : input.toCharArray())
@@ -25,6 +25,6 @@ public class FindFirstUniqueCharacter {
                 return outPut;
             }
 
-        throw new RuntimeException("no pair char found!");
+        return null;
     }
 }

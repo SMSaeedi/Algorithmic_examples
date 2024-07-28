@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class FindHillsAndValleys {
     public static int hillsAndValleys(int[] arr) {
+        /**
+         * .allMatch() checks whether all elements of the stream match a given predicate.
+         * It returns a boolean value.
+         */
         var match = Arrays.stream(arr).allMatch(s -> s == (arr[0]));
         if (match)
             return 0;
@@ -22,7 +26,7 @@ public class FindHillsAndValleys {
                 .filter(i -> i == fMax)
                 .count();
 
-        Long response = 0L;
+        long response = 0;
 
         if (isArrayIncreasing(arr))
             return (int) minCount;
@@ -34,7 +38,7 @@ public class FindHillsAndValleys {
                 .count();
         response = minCount + fMaxCount + sMaxCount;
 
-        return response.intValue();
+        return (int) response;
 
     }
 
@@ -64,15 +68,23 @@ public class FindHillsAndValleys {
 
     public static void main(String[] args) {
         int[] arr = {2, 2, 3, 4, 3, 3, 2, 2, 1, 1, 2, 5, 1, 1, 6};
-        System.out.print(hillsAndValleys(arr));
+        System.out.println(isArrayIncreasing(arr) ? "Max value: " + hillsAndValleys(arr) :
+                (isArrayDecreasing(arr) ? "Min value: " + hillsAndValleys(arr) :
+                        " Flat or Mountain Array " + hillsAndValleys(arr)));
 
         int[] arr1 = {-3, -3};
-        System.out.print(hillsAndValleys(arr1));
+        System.out.println(isArrayIncreasing(arr1) ? "Max value: " + hillsAndValleys(arr1) :
+                (isArrayDecreasing(arr1) ? "Min value: " + hillsAndValleys(arr1) :
+                        " Flat or Mountain Array " + hillsAndValleys(arr1)));
 
         int[] arr2 = {1, 2, 3};
-        System.out.print(hillsAndValleys(arr2));
+        System.out.println(isArrayIncreasing(arr2) ? "Max value: " + hillsAndValleys(arr2) :
+                (isArrayDecreasing(arr2) ? "Min value: " + hillsAndValleys(arr2) :
+                        " Flat or Mountain Array " + hillsAndValleys(arr2)));
 
         int[] arr3 = {3, 2, 1};
-        System.out.print(hillsAndValleys(arr3));
+        System.out.println(isArrayIncreasing(arr3) ? "Max value: " + hillsAndValleys(arr3) :
+                (isArrayDecreasing(arr3) ? "Min value: " + hillsAndValleys(arr3) :
+                        " Flat or Mountain Array" + hillsAndValleys(arr3)));
     }
 }

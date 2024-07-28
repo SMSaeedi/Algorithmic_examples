@@ -1,40 +1,48 @@
 package algorithm.examples;
 
 
-import org.apache.commons.lang3.ArrayUtils;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class FindMaxAndSecondMaxElementInArray {
     public static int findMaxElementInArray(int[] arr) {
         if (arr.length == 0)
             throw new RuntimeException("array is empty");
 
-        int max = arr[0];
-        for (int i = 0; i < arr.length; i++)
-            if (arr[i] > max)
-                max = arr[i];
+//        int max = arr[0];
+//        for (int i = 0; i < arr.length; i++)
+//            if (arr[i] > max)
+//                max = arr[i];
 
-        return max;
+        return Arrays.stream(arr).max().getAsInt();
     }
 
     public static int findSecondMaxElementInArray(int[] arr) {
         if (arr.length == 0)
             throw new RuntimeException("array is empty");
 
-        int max = arr[0];
-        int maxIndex = 0;
-        for (int i = 0; i < arr.length; i++)
-            if (arr[i] > max) {
-                max = arr[i];
-                maxIndex = i;
-            }
+//        int max = arr[0];
+//        int maxIndex = 0;
+//        for (int i = 0; i < arr.length; i++)
+//            if (arr[i] > max) {
+//                max = arr[i];
+//                maxIndex = i;
+//            }
 
-        int[] newArray = ArrayUtils.remove(arr, maxIndex);
-        int newArrayMax = newArray[0];
-        for (int j : newArray)
-            if (j > newArrayMax)
-                newArrayMax = j;
+//        int[] newArray = ArrayUtils.remove(arr, maxIndex);
+//        int newArrayMax = newArray[0];
+//        for (int j : newArray)
+//            if (j > newArrayMax)
+//                newArrayMax = j;
 
-        return newArrayMax;
+
+        return Arrays.stream(arr)
+                .boxed()                            // Convert int to Integer
+                .sorted(Comparator.reverseOrder())  // Sort in descending order
+                .distinct()                         // Remove duplicates
+                .skip(1)                         // Skip the first element (max value)
+                .findFirst()                        // Get the first element (second max value)
+                .orElseThrow(() -> new IllegalArgumentException("Array must contain at least two unique values"));
     }
 
     public static void main(String[] args) {
