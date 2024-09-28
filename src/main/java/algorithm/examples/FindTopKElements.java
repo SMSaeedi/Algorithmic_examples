@@ -22,7 +22,7 @@ class FindSecondTopElement {
                 .boxed()
                 .sorted(Comparator.reverseOrder())
                 .skip(1) //skip the first element to reach the second one
-                .mapToInt(Integer::intValue)
+                .mapToInt(Integer::intValue) // This line can be ignored
                 .findFirst();
         result.ifPresentOrElse(
                 System.out::println,
