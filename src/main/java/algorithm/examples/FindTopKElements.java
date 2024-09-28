@@ -27,7 +27,7 @@ class FindSecondTopElement {
         result.ifPresentOrElse(
                 System.out::println,
                 () -> {
-                    throw new IllegalArgumentException("Arrays too small");
+                    throw new IllegalArgumentException("Array is too small");
                 });
     }
 }
