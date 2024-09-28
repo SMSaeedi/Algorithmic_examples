@@ -1,6 +1,7 @@
 package algorithm.examples;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Calendar;
 
 public class FindDay {
@@ -13,8 +14,15 @@ public class FindDay {
         return days[dayOfWeek - 1];
     }
 
+    public static String findDayUsingJavaTime(int month, int day, int year) {
+        LocalDate localDate = LocalDate.of(year, month, day);
+        return localDate.getDayOfWeek().toString();
+    }
+
     public static void main(String[] args) throws IOException {
         System.out.println(FindDay.findDay(6, 10, 2024));
+        System.out.println(FindDay.findDayUsingJavaTime(4, 16, 1986));
+        System.out.println(FindDay.findDayUsingJavaTime(4, 4, 1991));
     }
 
 }
