@@ -15,7 +15,7 @@ public class LetterContiguous {
 
     private static boolean isLetterContiguous(char[] s) {
         for (int i = 1; i < s.length; i++)
-            if (s[i] - s[i - 1] != 1)
+            if (s[i] - s[i - 1] != 1) //s[i] return ascii code of the char
                 return false;
 
         return true;
